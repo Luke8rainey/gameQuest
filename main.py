@@ -71,7 +71,7 @@ class Game:
                 self.player.vel.y = 0
                 self.player.pos.y = hits[0].rect.top+1
             
-
+#tried to insert background imagage, unsuccessful 
     def events(self):
         # Game Loop - events
         for event in pg.event.get():
@@ -80,7 +80,7 @@ class Game:
                 if self.playing:
                     self.playing = False
                 self.running = False
-
+#makes the events possible from the loop
     def draw(self):
         # Game Loop - draw
         self.screen.fill(BLACK)
@@ -101,5 +101,5 @@ g.show_start_screen()
 while g.running:
     g.new()
     g.show_go_screen()
-
+#restart gameloop
 pg.quit()
